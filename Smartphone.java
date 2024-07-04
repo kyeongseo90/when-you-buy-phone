@@ -1,5 +1,4 @@
 public abstract class Smartphone {
-    private Person owner;
     private String brand;
     private String model;
     private double storage;
@@ -7,13 +6,8 @@ public abstract class Smartphone {
     private int volume;
     private boolean power;
 
-    public Smartphone(Person owner, Brand brand) {
-        this.owner = owner;
+    public Smartphone(Brand brand) {
         this.brand = brand.getKor();
-    }
-
-    public void buy(){
-        System.out.println(owner.getName()+"님이 "+model+"폰을 구매했습니다.");
     }
 
     public int increaseVolume() {
@@ -25,8 +19,11 @@ public abstract class Smartphone {
 
     public abstract void printTurnOnProcess(String comment);
 
+    public String getBrand(){
+        return brand;
+    }
+
     public void turnOn(){
-        System.out.println(owner.getName()+"님이 "+model+"폰을 켰습니다.");
         printTurnOnProcess("폰 켜지는 중");
     }
 

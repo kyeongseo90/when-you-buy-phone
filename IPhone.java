@@ -1,6 +1,6 @@
 public class IPhone extends Smartphone {
-    public IPhone(Person owner, Brand brand) {
-        super(owner, brand);
+    public IPhone() {
+        super(Brand.APPLE);
     }
 
     @Override

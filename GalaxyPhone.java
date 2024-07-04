@@ -1,6 +1,6 @@
 public class GalaxyPhone extends Smartphone {
-    public GalaxyPhone(Person owner, Brand brand) {
-        super(owner, brand);
+    public GalaxyPhone() {
+        super(Brand.SAMSUNG);
     }
 
     @Override
