@@ -5,12 +5,9 @@ public class Main {
 
         Smartphone iphone = new IPhone(jobs, Brand.APPLE);
         iphone.turnOn();
-        iphone.turnOff();
 
         GalaxyPhone galaxy = new GalaxyPhone(jaedragon, Brand.SAMSUNG);
         galaxy.turnOn();
-        galaxy.turnOff();
-
 
     }
 }

@@ -26,7 +26,7 @@ public abstract class Smartphone {
     public abstract void printTurnOnProcess(String comment);
 
     public void turnOn(){
-        System.out.println(owner.getName()+"님이 "+model+"폰을 켜졌습니다.");
+        System.out.println(owner.getName()+"님이 "+model+"폰을 켰습니다.");
         printTurnOnProcess("폰 켜지는 중");
     }
 
