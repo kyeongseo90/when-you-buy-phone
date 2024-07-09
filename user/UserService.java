@@ -12,9 +12,15 @@ public class UserService {
         System.out.println(userName + "님, 가입을 환영합니다.");
     }
 
-    public void signIn(User user) {
-        System.out.println(user.getName() + "님, 로그인되었습니다.");
-        loggedUsers.add(user.getId());
+    public void signIn(Long loginId, String halfBaked) {
+        if (loggedUsers.contains(loginId)) {
+            System.out.println("이미 로그인되어 있습니다.");
+        } else if (!dao.checkLogin(loginId, halfBaked)) {
+            System.out.println("아이디 또는 비밀번호가 일치하지 않습니다.");
+        } else {
+            System.out.println(user.getName() + "님, 로그인되었습니다.");
+            loggedUsers.add(user.getId());
+        }
     }
 
     public void logout(User user) {

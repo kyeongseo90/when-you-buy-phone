@@ -25,7 +25,6 @@ public class UserDAO { // Repository
         else return "유저정보와 일치하는 유저를 찾을 수 없습니다.";
     }
 
-    // 회원 탈퇴
     public String delete(User user) {
         if (db.get(user.getId()).equals(user)) {
             db.remove(user.getId());
@@ -35,4 +34,5 @@ public class UserDAO { // Repository
             return "유저정보와 일치하는 유저를 찾을 수 없습니다.";
         }
     }
+
 }

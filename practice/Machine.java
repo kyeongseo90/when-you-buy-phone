@@ -1,5 +1,8 @@
 package practice;
 
+import java.io.IOException;
+import java.io.Writer;
+
 public class Machine {
     String name;
     String location;
@@ -10,7 +13,7 @@ public class Machine {
         this.location = location;
     }
 
-    public String takeTrash() {
+    public String clearBasket() {
         String trash = basket;
         basket = null;
         return trash;
@@ -20,11 +23,21 @@ public class Machine {
         return basket;
     }
 
-    public void put(String bin) {
-        this.basket = bin;
+    public void put(String basket) {
+        this.basket = basket;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void printStatus(Writer out) throws IOException {
+        out.write("Machine : " + name);
+
+        if (basket != null) {
+            out.write(" bin=" + basket);
+        }
+
+        out.write("\n");
     }
 }

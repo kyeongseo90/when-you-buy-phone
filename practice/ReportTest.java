@@ -22,21 +22,20 @@ public class ReportTest {
 		machine2.put("basket2");
 		machine3.put("basket3");
 		
-		List<Machine> machines = new ArrayList<Machine>();
+		List<Machine> machines = new ArrayList<>();
 		
 		machines.add(machine1);
 		machines.add(machine2);
 		machines.add(machine3);
 		
-		
-				
+
 		Robot robot = new Robot();
 		robot.moveTo(machine2);
-		robot.pick();
+		robot.clear();
 		
 		
 		Report report = new Report();
-		report.report(out, machines, robot);
+		report.printFactory(out, machines, robot);
 		
 		out.close();
 		

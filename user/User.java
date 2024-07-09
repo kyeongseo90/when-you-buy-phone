@@ -13,24 +13,23 @@ public class User {
         this.halfBaked = halfBaked;
         this.name = name;
     }
+
     public String getName(){
         return name;
     }
     public String getLoginId(){
         return loginId;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
     public long getId() {
         return id;
     }
-
     public void setAll(String loginId, String halfBaked, String name) {
         this.loginId = loginId;
         this.halfBaked = halfBaked;
         this.name = name;
     }
+    public boolean is
 }
